@@ -17,6 +17,62 @@ namespace Packt.Shared
         //iterations must be at least 1000, lets use 2000
         private static readonly int iterations = 2000;
 
+        private static Dictionary<string, User> Users = new Dictionary<string, User>();
+
+        public static User Register(string username, string password, string[] roles = null)
+        {
+            // generate a random salt
+            var rng = RandomNumberGenerator.Create();
+            var saltBytes = new byte[16];
+            rng.GetBytes(saltBytes);
+            var saltText = Convert.ToBase64String(saltBytes);
+
+            // generate the salted and hashed password 
+            var saltedhashedPassword = SaltAndHashPassword(password, saltText);
+
+            var user = new User
+            {
+                Name = username,
+                Salt = saltText,
+                SaltedHashedPassword = saltedhashedPassword,
+            };
+            Users.Add(user.Name, user);
+
+            return user;
+        }
+
+        // check a user's password that is stored
+        // in the private static dictionary Users
+        public static bool CheckPassword(string username, string password)
+        {
+            if (!Users.ContainsKey(username))
+            {
+                return false;
+            }
+
+            var user = Users[username];
+
+            return CheckPassword(username, password, user.Salt, user.SaltedHashedPassword);
+        }
+
+        // check a user's password using salt and hashed password
+        public static bool CheckPassword(string username, string password, string salt, string hashedPassword)
+        {
+            // re-generate the salted and hashed password 
+            var saltedhashedPassword = SaltAndHashPassword(
+              password, salt);
+
+            return (saltedhashedPassword == hashedPassword);
+        }
+
+        private static string SaltAndHashPassword(string password, string salt)
+        {
+            var sha = SHA256.Create();
+            var saltedPassword = password + salt;
+            return Convert.ToBase64String(
+              sha.ComputeHash(Encoding.Unicode.GetBytes(saltedPassword)));
+        }
+
         public static string Encrypt(string plainText, string password)
         {
             byte[] encryptedBytes;
