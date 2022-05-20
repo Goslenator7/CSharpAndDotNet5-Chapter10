@@ -35,10 +35,21 @@ namespace Packt.Shared
                 Name = username,
                 Salt = saltText,
                 SaltedHashedPassword = saltedhashedPassword,
+                Roles = roles
             };
             Users.Add(user.Name, user);
 
             return user;
+        }
+
+        public static void LogIn(string username, string password)
+        {
+            if (CheckPassword(username, password))
+            {
+                var identity = new GenericIdentity(username, "PacktAuth");
+                var principal = new GenericPrincipal(identity, Users[username].Roles);
+                System.Threading.Thread.CurrentPrincipal = principal;
+            }
         }
 
         // check a user's password that is stored
