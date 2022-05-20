@@ -1,0 +1,12 @@
+C:\Users\Ryan\Documents\Coding\C#AndDotNet5 Mk2\Chapter10\CryptographyLib\bin\Debug\net5.0\CryptographyLib.deps.json
+C:\Users\Ryan\Documents\Coding\C#AndDotNet5 Mk2\Chapter10\CryptographyLib\bin\Debug\net5.0\CryptographyLib.dll
+C:\Users\Ryan\Documents\Coding\C#AndDotNet5 Mk2\Chapter10\CryptographyLib\bin\Debug\net5.0\ref\CryptographyLib.dll
+C:\Users\Ryan\Documents\Coding\C#AndDotNet5 Mk2\Chapter10\CryptographyLib\bin\Debug\net5.0\CryptographyLib.pdb
+C:\Users\Ryan\Documents\Coding\C#AndDotNet5 Mk2\Chapter10\CryptographyLib\obj\Debug\net5.0\CryptographyLib.csproj.AssemblyReference.cache
+C:\Users\Ryan\Documents\Coding\C#AndDotNet5 Mk2\Chapter10\CryptographyLib\obj\Debug\net5.0\CryptographyLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ryan\Documents\Coding\C#AndDotNet5 Mk2\Chapter10\CryptographyLib\obj\Debug\net5.0\CryptographyLib.AssemblyInfoInputs.cache
+C:\Users\Ryan\Documents\Coding\C#AndDotNet5 Mk2\Chapter10\CryptographyLib\obj\Debug\net5.0\CryptographyLib.AssemblyInfo.cs
+C:\Users\Ryan\Documents\Coding\C#AndDotNet5 Mk2\Chapter10\CryptographyLib\obj\Debug\net5.0\CryptographyLib.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\Documents\Coding\C#AndDotNet5 Mk2\Chapter10\CryptographyLib\obj\Debug\net5.0\CryptographyLib.dll
+C:\Users\Ryan\Documents\Coding\C#AndDotNet5 Mk2\Chapter10\CryptographyLib\obj\Debug\net5.0\ref\CryptographyLib.dll
+C:\Users\Ryan\Documents\Coding\C#AndDotNet5 Mk2\Chapter10\CryptographyLib\obj\Debug\net5.0\CryptographyLib.pdb
